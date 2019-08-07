@@ -22,8 +22,27 @@
             <div>
                 <i class="fas fa-phone-alt tel-icon"></i></i><input type="text" placeholder="(11) 99999-9999">
             </div>
-            <input type="submit" placeholder="Entrar">
+            <input type="submit" value="Entrar" id="btnEntrar">
+        </div>
+        <div class="bg-modal" id="modal">
+            <div class="modal">
+                <p>Seu número é (11) 99999-9999?</p>
+                <input type="submit" class="btn-yes" value="Sim" id="btnConfirm">
+                <input type="submit" class="btn-no" value="Não" id="btnCancel">
+            </div>
         </div>
     </section>
+    <script>
+            btnEntrar = document.getElementById('btnEntrar')
+            btnEntrar.onclick = function () {
+                modal = document.getElementById('modal')
+                modal.classList.add("d-flex");
+            }
+            btnCancel = document.getElementById('btnCancel')
+            btnCancel.onclick = function () {
+                modal = document.getElementById('modal')
+                modal.classList.remove("d-flex")
+            }
+    </script>
 </body>
 </html>

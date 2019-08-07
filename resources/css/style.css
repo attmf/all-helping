@@ -61,3 +61,35 @@ body{
     font-size: 1em;
     margin-top: 1.5em;
 }
+.bg-modal{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0, 0.5);
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0
+}
+.modal{
+    background-color: #fff; 
+    padding: 3em 1em 1em;
+    text-align: center;
+}
+.btn-yes{
+    background-color: #4FCE5D;
+    margin: 3em 1em 1em;
+    border: none;
+    padding: 0.5em;
+    color: white;
+}
+.btn-no{
+    background-color: #b80101;
+    margin: 3em 1em 1em;
+    border: none;
+    padding: 0.5em;
+    color: white;
+}
+.d-flex{
+    display: flex;
+}
