@@ -34,11 +34,12 @@
     </section>
     <script>
             btnEntrar = document.getElementById('btnEntrar')
+            btnCancel = document.getElementById('btnCancel')
+            
             btnEntrar.onclick = function () {
                 modal = document.getElementById('modal')
                 modal.classList.add("d-flex");
             }
-            btnCancel = document.getElementById('btnCancel')
             btnCancel.onclick = function () {
                 modal = document.getElementById('modal')
                 modal.classList.remove("d-flex")
