@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: sans-serif;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 33.3vh;
+    width: 100%;
+}
+.main{
+    height: 66vh;
+}
+.brand{
+    width: 260px;
+}
+.welcome{
+    text-align: center;
+    font-size: 1.8em;
+    width: 90%;
+    margin: auto;
+    line-height: 1.5em;
+    height: 50%;
+}
+.tel{
+    text-align: center;
+    height: 50%;
+}
+.tel input[type=text]{
+    height: 40px;
+    background-color: #eee;
+    border: 1px solid #aaa;
+}
+.tel-icon{
+    font-size: 1.4em;
+    background-color: #369;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    color: white;
+    padding: 10px;
+}
+.tel div{
+    display: flex;
+    justify-content: center;
+}
+.tel p{
+    margin: 1em;
+}
+.tel input[type=submit]{
+    background: #369;
+    color: white;
+    border: none;
+    padding: .5em;
+    border-radius: 5px;
+    height: 3em;
+    width: 35%;
+    font-size: 1em;
+    margin-top: 1.5em;
+}
