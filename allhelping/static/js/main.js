@@ -6,19 +6,25 @@ const inputNumber = document.querySelector('.inputNum');
 
 const msgErr = document.querySelector('.msgError');
 
+const num = document.querySelector('#num');
+
 btnProximo.onclick = () => {
-    if (inputNumber.value === "") {
+    if (inputNumber.value === "" || inputNumber.value.length < 11) {
         msgErr.style = "display:block";
-        return;
+        inputNumber.focus();
+        return false;
     }
     else{
         msgErr.style = "display:none";
         let modal = document.querySelector('#modal');
         modal.classList.add('d-flex');
     }
+    num.innerHTML = inputNumber.value;
 }
 
 btnNao.onclick = () => {
     let modal = document.querySelector('#modal');
     modal.classList.remove('d-flex');
+    inputNumber.value = "";
+    inputNumber.focus();
 }
