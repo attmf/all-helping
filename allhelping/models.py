@@ -5,6 +5,9 @@ class Ajudado(models.Model):
   nome = models.CharField(
     max_length=255,
     verbose_name='Nome')
+  sobrenome = models.CharField(
+    max_length=255,
+    verbose_name='Sobrenome')
   email = models.EmailField(
     max_length=255,
     verbose_name='E-mail')
