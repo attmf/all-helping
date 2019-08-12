@@ -10,13 +10,13 @@
         <form method="POST" action="/home">
             {% csrf_token %}
             <label>Nome:</label>
-            <input type="text" placeholder="Digite seu nome...">
+            <input type="text" placeholder="Digite seu nome..." required>
             <label>Sobrenome:</label>
-            <input type="text" placeholder="Digite seu sobrenome...">
+            <input type="text" placeholder="Digite seu sobrenome..." required>
             <label>E-mail:</label>
-            <input type="email" placeholder="Digite seu e-mail...">
+            <input type="email" placeholder="Digite seu e-mail..." required>
             <div class="d-flex">
-                <input type="submit" value="Próximo" id="btnNext" class="btn">
+                <input type="submit" value="Próximo" id="btnNext" class="btnNext">
             </div>
         </form>
     </div>

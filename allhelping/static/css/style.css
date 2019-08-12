@@ -5,12 +5,12 @@
 
 body {
     font-family: 'Arya', sans-serif;
-    overflow-y: hidden;
+    overflow: hidden;
 }
 
 .main {
-    padding: 10%;
-    /* background-color: #999; */
+    margin: 10%;
+    /* background-color: rgb(236, 233, 233); */
     height: 100%;
     display: flex;
     align-items: center;
@@ -61,28 +61,26 @@ body {
     padding: 10px;
 }
 
-input[type=number], input[type=text], input[type=email] {
+.inputNum {
     height: 40px;
-    background-color: #eee;
+    background-color: rgba(196, 196, 196, 0.56);
     border: 1px solid gray;
     border-left: none;
     border-radius: 0 5px 5px 0;
     font-size: .9em;
-    color: gray;
-    padding-left: 10px;
 }
 
-input::placeholder {
+.inputNum::placeholder {
     padding: 10px;
     text-decoration: underline;
 }
 
 .tel_login p,
 .input {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
-.btn {
+.btnNext {
     border: none;
     width: 100px;
     height: 40px;
@@ -126,7 +124,7 @@ input::placeholder {
 }
 
 .btn-yes {
-    background-color: #369;
+    background-color: #0c88cd;
 }
 
 .btn-no {
@@ -142,7 +140,15 @@ input::placeholder {
     display: none;
     color: #e43f34;
     font-size: .9em;
+    margin: 0;
+    padding: 0;
 }
+
+.form {
+    display: none;
+}
+
+
 
 .cadastro div{
     padding: 10%;
@@ -163,11 +169,21 @@ input::placeholder {
     text-align: center;
 }
 
-.form-reg input[type=text], input[type=email] {
+.form-reg input[type=text], input[type=email], input[type=email] {
     width: 100%;
-    border-radius: 5px;
-    border-left: 1px solid gray;
+    border-radius: 5px!important;
+    border-left: 1px solid gray!important;
 }
 .form-reg input::placeholder {
     text-decoration: none;
+}
+input[type=number], input[type=text], input[type=email] {
+    height: 40px;
+    background-color: #eee;
+    border: 1px solid gray;
+    border-left: none;
+    border-radius: 0 5px 5px 0;
+    font-size: .9em;
+    color: gray;
+    padding-left: 10px;
 }
