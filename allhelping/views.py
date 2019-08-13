@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Ajudado, Ajudante
+from .models import Ajudado, Ajudante, Match, Mensagem
 
 
 # Create your views here.
@@ -12,10 +12,18 @@ def acesso(request):
     ajudado_bd = Ajudado.objects.filter(telefone=request.GET.get('telefone')).first()
     telefone = request.GET.get('telefone')
     if ajudado_bd is not None:
-        return render(request, 'home.html', {'ajudado': ajudado_bd})
+        match_bd = Match.objects.filter(ID_ajudado=ajudado_bd.id).first()
+        if match_bd is None:
+            match = Match()
+            match.ID_ajudante = Ajudante.objects.first()
+            match.ID_ajudado = ajudado_bd
+            match.save()
+            match_bd = Match.objects.filter(ID_ajudado=ajudado_bd.id).first()
+        ajudante = Ajudante.objects.filter(id=match_bd.ID_ajudante).first()
+        ajudado = Ajudado.objects.filter(id=match_bd.ID_ajudado).first()
+        return render(request, 'home.html', {'ajudante': ajudante.nome, 'ajudado': ajudado.nome})
     else:
         return render(request, 'cadastrar.html', {'telefone': telefone})
-        
 
 def render_cadastro(request):
     ajudado = Ajudado()
@@ -25,8 +33,11 @@ def render_cadastro(request):
         ajudado.sobrenome = request.POST.get('sobrenome')
         ajudado.email = request.POST.get('email')
         ajudado.save()
-        return render(request, 'home.html')
+        return render(request, 'home.html', {'ajudado': ajudado})
     return render(request, 'cadastrar.html')
 
 def render_home(request):
     return render(request, 'home.html')
+
+#def criar_match(ajudado_id):
+    

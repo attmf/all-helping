@@ -10,7 +10,7 @@
         <form method="POST" action="/cadastro">
             {% csrf_token %}
             <input type="hidden" name="telefone" value="{{telefone}}">
-            <label>Nome:{{telefone}}</label>
+            <label>Nome:</label>
             <input type="text" name="nome" placeholder="Digite seu nome..." required>
             <label>Sobrenome:</label>
             <input type="text" name="sobrenome" placeholder="Digite seu sobrenome..." required>
