@@ -1,6 +1,7 @@
 const btnProximo = document.querySelector('#btnNext');
 const btnNao = document.querySelector('#btnNo');
 const btnSim = document.querySelector('#btnYes');
+const spnProximo = document.querySelector('#spnNext')
 
 const inputNumber = document.querySelector('.inputNum');
 
@@ -23,7 +24,6 @@ btnProximo.onclick = () => {
     }
     num.innerHTML = inputNumber.value;
     inputNumberBd.value = inputNumber.value;
-    
 }
 
 btnNao.onclick = () => {
@@ -31,4 +31,9 @@ btnNao.onclick = () => {
     modal.classList.remove('d-flex');
     inputNumber.value = "";
     inputNumber.focus();
+}
+
+spnProximo.onclick = () => {
+    let modal = document.querySelector('#modal');
+    modal.classList.add('d-flex');
 }

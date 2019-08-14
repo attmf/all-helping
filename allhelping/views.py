@@ -3,8 +3,6 @@ from .models import Ajudado, Ajudante, Match, Mensagem
 
 
 # Create your views here.
-global telefone
-
 def render_index(request):
     return render(request, 'index.html')
 
@@ -19,7 +17,7 @@ def acesso(request):
             match.ID_ajudado = ajudado_bd
             match.save()
             match_bd = Match.objects.filter(ID_ajudado=ajudado_bd.id).first()
-        return render(request, 'home.html', {'ajudante': match_bd.ID_ajudante.nome, 'ajudado': match_bd.ID_ajudado.nome})
+        return render(request, 'home.html', {'match': match_bd})
     else:
         return render(request, 'cadastrar.html', {'telefone': telefone})
 
