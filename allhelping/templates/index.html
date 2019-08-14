@@ -34,6 +34,18 @@
                 </form>
             </div>
         </div>
+        <div class="modal">
+            <p>Qual seu objetivo?</p>
+            <p id="num"></p>
+            <div class="d-flex">
+                <form method="GET" action="/acesso">
+                    <input type="submit" class="btn-no" value="Ajudar" id="btnNo">
+                    {% csrf_token %}
+                    <input type="text" class="hidden" id="inputNumberBd" name="telefone">
+                    <input type="submit" class="btn-yes" value="Ser Ajudado" id="btnYes">
+                </form>
+            </div>
+        </div>
     </div>
 </section>
 {% endblock main %}

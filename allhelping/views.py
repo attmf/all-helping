@@ -19,9 +19,7 @@ def acesso(request):
             match.ID_ajudado = ajudado_bd
             match.save()
             match_bd = Match.objects.filter(ID_ajudado=ajudado_bd.id).first()
-        ajudante = Ajudante.objects.filter(id=match_bd.ID_ajudante).first()
-        ajudado = Ajudado.objects.filter(id=match_bd.ID_ajudado).first()
-        return render(request, 'home.html', {'ajudante': ajudante.nome, 'ajudado': ajudado.nome})
+        return render(request, 'home.html', {'ajudante': match_bd.ID_ajudante.nome, 'ajudado': match_bd.ID_ajudado.nome})
     else:
         return render(request, 'cadastrar.html', {'telefone': telefone})
 
