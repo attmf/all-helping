@@ -3,18 +3,25 @@
 <section class="chat">
     <div class="chat-header">
         <i></i>
-        <p class="ajudante">{{ajudante}}</p>
+        <p class="ajudante"></p>
         <img></img>
+
+        <img></img>
+        <p class="ajudado"></p>
+        <i></i>
     </div>
 
     <div class="chat-content">
         <div class="coment">
-            <p>{{ajudado}}</p>
-            <p>Conteúdo do chat 1</p>
-        </div>
-        <div class="coment">
-            <p>Mano 2</p>
-            <p>Conteúdo do chat 2</p>
+            {% if ajudante %}
+                {% for match in matchs %}
+                <p>{{match.ID_ajudado.nome}}</p>
+                {% endfor %}
+            {% elif ajudado %}
+                {% for match in matchs %}
+                <p>{{match.ID_ajudante.nome}}</p>
+                {% endfor %}
+            {% endif %}
         </div>
     </div>
 

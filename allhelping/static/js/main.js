@@ -1,6 +1,7 @@
 const btnProximo = document.querySelector('#btnNext');
 const btnNao = document.querySelector('#btnNo');
 const btnSim = document.querySelector('#btnYes');
+const btNext = document.querySelector('#btNext')
 
 const inputNumber = document.querySelector('.inputNum');
 
@@ -32,3 +33,15 @@ btnNao.onclick = () => {
     inputNumber.value = "";
     inputNumber.focus();
 }
+
+function mostrarModal(){
+    let modal = document.querySelector('#modal');
+    modal.classList.add('d-flex');
+}
+
+document.getElementById("ajudar").addEventListener("click", function(event){
+    event.preventDefault();
+    btnAjudar = document.querySelector('#ajudar');
+    inputPapel = document.querySelector('#papel');
+    inputPapel.value = btnAjudar.value;
+});
