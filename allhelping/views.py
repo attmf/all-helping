@@ -3,8 +3,6 @@ from .models import Ajudado, Ajudante, Match, Mensagem
 
 
 # Create your views here.
-global telefone
-
 def render_index(request):
     return render(request, 'index.html')
 

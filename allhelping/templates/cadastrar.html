@@ -9,7 +9,7 @@
         <p>Insira os dados nos campos</p>
         <form method="POST" action="/cadastro">
             {% csrf_token %}
-            <input type="hidden" name="telefone" value="{{telefone}}">
+            
             <label>Nome:</label>
             <input type="text" name="nome" placeholder="Digite seu nome..." required>
             <label>Sobrenome:</label>

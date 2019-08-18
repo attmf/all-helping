@@ -24,7 +24,6 @@ btnProximo.onclick = () => {
     }
     num.innerHTML = inputNumber.value;
     inputNumberBd.value = inputNumber.value;
-    
 }
 
 btnNao.onclick = () => {
